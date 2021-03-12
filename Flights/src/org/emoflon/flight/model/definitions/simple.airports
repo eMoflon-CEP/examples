@@ -1,0 +1,7 @@
+//
+// Airports
+// Airport-ID,Gates,scale-factor
+// 
+DXB;400;3.0
+FRA;200;0.5
+SYD;100;0.8

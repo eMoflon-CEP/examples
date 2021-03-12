@@ -1,0 +1,18 @@
+//
+// Non-connecting dummy flights for booking generator
+// Route-ID,capacity,day-offset(SHOULD BE '0' HERE!)
+//
+EK44,364,0
+EK45,364,0
+EK46,489,0
+EK47,489,0
+EK48,489,0
+EK49,489,0
+LH630,221,0
+LH631,221,0
+EK412,489,0
+EK413,489,0
+EK414,364,0
+EK415,489,0
+EK416,489,0
+EK417,489,0

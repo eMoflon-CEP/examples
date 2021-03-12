@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Flights/src-gen" creationIcons="false" editDirectory="/Flights.edit/src-gen"
+    editorDirectory="/Flights.editor/src-gen" modelPluginID="Flights" modelName="Flights"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Flights.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Flights" disposableProviderFactory="true" ecorePackage="Flights.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Flights.ecore#//TravelState">
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//TravelState/unknown"/>
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//TravelState/checkedIn"/>
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//TravelState/luggageDroppedOf"/>
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//TravelState/onBoard"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Flights.ecore#//FlightState">
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//FlightState/planned"/>
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//FlightState/inFlight"/>
+      <genEnumLiterals ecoreEnumLiteral="Flights.ecore#//FlightState/completed"/>
+    </genEnums>
+    <genClasses ecoreClass="Flights.ecore#//FlightModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/flights"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/bookings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/persons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/routes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/airports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/planes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightModel/globalTime"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Flights.ecore#//FlightObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//FlightObject/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//FlightContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//FlightContainer/flights"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Flight">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Flight/travels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Flight/route"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Flight/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Flight/trg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Flight/plane"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference Flights.ecore#//Flight/departure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference Flights.ecore#//Flight/arrival"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//Flight/newAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Bookings">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Bookings/bookings"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Booking">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Booking/travels"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Routes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Routes/routes"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Route">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//Route/duration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Route/flights"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Route/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Route/trg"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Travel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Travel/flights"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Travel/person"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Persons">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Persons/persons"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//Person/travelState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Person/travels"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Airports">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Airports/airports"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Airport">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Airport/gates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//Airport/size"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Airport/outgoingRoutes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Airport/incomingRoutes"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Planes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flights.ecore#//Planes/planes"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Plane">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//Plane/capacity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Plane/flights"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//Gate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//Gate/position"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Gate/outgoingFlights"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flights.ecore#//Gate/incomingFlights"/>
+    </genClasses>
+    <genClasses ecoreClass="Flights.ecore#//TimeStamp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flights.ecore#//TimeStamp/time"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
